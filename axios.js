@@ -20,4 +20,4 @@ search.addEventListener('click',async(e)=>{
 // //     div.appendChild('p',x.name)
 // // })
 
-Image.setAttribute('src',res.data.avatar)
+// Image.setAttribute('src',res.data.avatar)
