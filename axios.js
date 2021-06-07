@@ -3,9 +3,8 @@ const submit = document.getElementById('submit')
 const dataName = document.getElementById('name')
 const repos = document.getElementById('repos_url')
 const repo = document.getElementById('repo')
-
 const avatar = document.getElementById('avatar_url')
-// const image = document.getElementById('avatar_url').innerHTML=`<img src="">`
+
 var namee ;
 
 submit.addEventListener('click',async(e)=>{
@@ -20,7 +19,7 @@ submit.addEventListener('click',async(e)=>{
         
         let count = 0;
         const arepo = await axios.get(`https://api.github.com/users/${search.value}/repos`)
-        console.log(arepo)
+        // console.log(arepo)
         repo.innerHTML = ""
         for (const key in arepo) {
            var data =  arepo.data[count].name;
@@ -33,10 +32,3 @@ submit.addEventListener('click',async(e)=>{
     }
 
 })
-
-
-// // x.map((x)=>{
-// //     div.appendChild('p',x.name)
-// // })
-
-// Image.setAttribute('src',res.data.avatar)
